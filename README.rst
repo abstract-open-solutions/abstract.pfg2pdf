@@ -2,11 +2,6 @@
 abstract.pfg2pdf
 ==============================================================================
 
-Tell me what your product does
-
-Features
---------
-
 A PFG action for creating and downloading a PDF built with data from user input.
 
 PDF download happens as you submit the form.
@@ -40,6 +35,12 @@ Dependencies
 Depends on `abstract.wkhtmltopdf <https://github.com/abstract-open-solutions/abstract.wkhtmltopdf>`_ to generate the PDF.
 
 Look at buidout.cfg in this package to see how to
+
+
+TODO
+----
+
+* handle redirect to thank you page
 
 
 Contribute
