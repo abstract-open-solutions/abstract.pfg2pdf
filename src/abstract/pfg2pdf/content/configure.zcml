@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="abstract.pfg2pdf">
+
+  <!-- configure your content components here -->
+
+  <class class=".formtopdfadapter.FormToPDFAdapter">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IFormToPDFAdapter"
+        />
+  </class>
+
+</configure>

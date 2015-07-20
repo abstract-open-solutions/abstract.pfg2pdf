@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="abstract.pfg2pdf"
+    interface="abstract.pfg2pdf.interfaces.IAbstractPfg2PdfLayer"
+  />
+</layers>

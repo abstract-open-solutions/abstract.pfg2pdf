@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <!-- -*- extra stuff goes here -*- -->
+    <permission name="abstract.pfg2pdf: Add FormToPDFAdapter" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+      <role name="Site Administrator" />
+    </permission>
+  </permissions>
+</rolemap>
