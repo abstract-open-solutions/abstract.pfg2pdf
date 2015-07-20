@@ -12,6 +12,8 @@ Usage
 
 Add Form Folder and add a `FormToPDFAdapter` to it.
 
+On the adapter, in the field `PDF-Body Template` you can insert the ZPT code that will be used to generate the PDF.
+
 
 Installation
 ------------
