@@ -36,7 +36,6 @@ Dependencies
 
 Depends on `abstract.wkhtmltopdf <https://github.com/abstract-open-solutions/abstract.wkhtmltopdf>`_ to generate the PDF.
 
-Look at buidout.cfg in this package to see how to
 
 
 TODO
