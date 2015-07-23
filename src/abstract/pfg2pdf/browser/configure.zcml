@@ -4,23 +4,19 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="abstract.pfg2pdf">
 
-    <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
-    <include package="z3c.jbot" file="meta.zcml" />
-    <browser:jbot
-        directory="overrides"
-        layer="abstract.pfg2pdf.interfaces.IAbstractPfg2PdfLayer"
-        />
-
-    <!-- Publish static files -->
-    <browser:resourceDirectory
-        name="abstract.pfg2pdf"
-        directory="static"
-        />
-
     <browser:page
         for="abstract.pfg2pdf.interfaces.IFormToPDFAdapter"
         name="pdf_download"
-        class=".pdf.PDFView"
+        class=".views.DownloadView"
+        permission="zope2.View"
+        layer="abstract.pfg2pdf.interfaces.IAbstractPfg2PdfLayer"
+        />
+
+    <browser:page
+        for="Products.PloneFormGen.interfaces.IPloneFormGenThanksPage"
+        name="pdf_redirect"
+        class=".views.RedirectView"
+        template="redirect_view.pt"
         permission="zope2.View"
         layer="abstract.pfg2pdf.interfaces.IAbstractPfg2PdfLayer"
         />

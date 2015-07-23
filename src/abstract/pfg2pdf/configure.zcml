@@ -31,5 +31,10 @@
         handler=".setuphandlers.post_install">
     </genericsetup:importStep>
 
+    <subscriber
+        for=".interfaces.IFormToPDFAdapter
+             Products.Archetypes.interfaces.IObjectInitializedEvent"
+        handler=".subscribers.on_create_form_adapter"
+        />
 
 </configure>

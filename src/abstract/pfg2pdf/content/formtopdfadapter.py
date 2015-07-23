@@ -1,7 +1,6 @@
 """Definition of the FormToPDFAdapter content type
 """
 
-import urllib
 # from Acquisition import aq_inner
 # from Acquisition import aq_parent
 from AccessControl import ClassSecurityInfo
@@ -36,18 +35,30 @@ FormToPDFAdapterSchema = FormAdapterSchema.copy() + atapi.Schema((
         read_permission=ModifyPortalContent,
         widget=atapi.TextAreaWidget(
             label=_(
-                u'label_form_topdf_body_pt',
-                default=u'PDF-Body Template'
+                _(u'PDF-Body Template')
             ),
             description=_(
-                u'help_form_topdf_body_pt',
-                default=u"""This is a Zope Page Template
-                        used for rendering of the PDF for this form."""
+                _(u"This is a Zope Page Template "
+                  u"used for rendering of the PDF for this form. "
+                  u"You will find data from the form "
+                  u"in the `options` var (es: options/comments)")
             ),
             rows=20,
             visible={'edit': 'visible', 'view': 'invisible'},
         ),
         validators=('zptvalidator',),
+    ),
+
+    atapi.IntegerField(
+        'download_timeout',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.IntegerWidget(
+            label=_(u"Download Timeout"),
+            description=_(u"How many seconds should pass "
+                          u"before downloading the PDF?"),
+        ),
+        validators=('isInt'),
+        default=5,
     ),
 
 
@@ -90,11 +101,11 @@ class FormToPDFAdapter(FormActionAdapter):
         data = {}
         for k, v in request.form.iteritems():
             data[k] = v
-        url = '/'.join([
-            self.absolute_url().strip('/'),
-            '/pdf_download' + '?' + urllib.urlencode(data)
-        ])
-        request.response.redirect(url)
+        request.set('pdf_data', data)
+        request.set('pdf_adapter_path', self.absolute_url_path())
+        request.set('pdf_adapter_url', self.absolute_url())
+        request.set('download_timeout',
+                    self.getField('download_timeout').get(self))
 
 
 atapi.registerType(FormToPDFAdapter, PROJECTNAME)

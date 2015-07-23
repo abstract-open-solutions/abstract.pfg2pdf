@@ -43,7 +43,6 @@ setup(
     install_requires=[
         'plone.api',
         'setuptools',
-        'z3c.jbot',
         'Products.PloneFormGen',
         'Products.TemplateFields',
         'abstract.wkhtmltopdf',

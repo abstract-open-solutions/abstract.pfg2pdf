@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-07-23 08:02+0000\n"
+"PO-Revision-Date: 2015-07-23 10:03+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../browser/redirect_view.pt:83
+msgid "Direct link"
+msgstr "Link diretto"
+
+#: ../content/formtopdfadapter.py:56
+msgid "Download Timeout"
+msgstr ""
+
+#: ../profiles/default/types/FormToPDFAdapter.xml
+msgid "FormToPDFAdapter"
+msgstr ""
+
+#: ../content/formtopdfadapter.py:57
+msgid "How many seconds should pass before downloading the PDF?"
+msgstr ""
+"Quanti secondi devono passare prima che parta il download automatico del PDF?"
+
+#: ../content/formtopdfadapter.py:37
+msgid "PDF-Body Template"
+msgstr ""
+
+#: ../browser/redirect_view.pt:80
+msgid "Problems with the download? Please use this link to download the file."
+msgstr "Problemi col download? Puoi usare questo link per scaricare il file."
+
+#: ../browser/views.py:43
+msgid "Something went wrong, please check your template!"
+msgstr "Qualcosa é andato storto, controlla il tuo template!"
+
+#: ../content/formtopdfadapter.py:40
+msgid ""
+"This is a Zope Page Template used for rendering of the PDF for this form. "
+"You will find data from the form in the `options` var (es: options/comments)"
+msgstr ""
+"Questo é uno \"Zope Page Template \" utilizzato per generare il PDF per "
+"questo form. Troverai i dati del form nella variabile `options` (es: options/"
+"comments)."
+
+#: ../browser/redirect_view.pt:76
+msgid "Your download will start in ${timeout} seconds..."
+msgstr "Il download partirá in ${timeout} secondi..."
