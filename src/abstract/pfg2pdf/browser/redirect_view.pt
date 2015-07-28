@@ -21,10 +21,12 @@
   <metal:main_macro>
     <tal:base-thans-view i18n:domain="plone">
 
-      <p tal:condition="view/can_edit" i18n:translate="">
-        Note: the `pdf_redirect` view has been applied to this page.
-        You see this because you have the permission to edit this content.
-      </p>
+      <dl class="portalMessage info">
+        <dt i18n:domain="plone">Info</dt>
+        <dd i18n:domain="abstract.pfg2pdf"
+            i18n:translate="">The `pdf_redirect` view has been applied to this page. You see this because you have the permission to edit this content.
+        </dd>
+      </dl>
 
       <div tal:condition="exists:request/form/fieldset" tal:omit-tag="">
 

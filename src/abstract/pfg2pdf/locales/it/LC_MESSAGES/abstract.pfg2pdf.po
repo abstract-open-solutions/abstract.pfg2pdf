@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-07-23 08:02+0000\n"
-"PO-Revision-Date: 2015-07-23 10:03+0100\n"
+"POT-Creation-Date: 2015-07-28 17:00+0000\n"
+"PO-Revision-Date: 2015-07-28 19:01+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Domain: DOMAIN\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../browser/redirect_view.pt:83
+#: ../browser/redirect_view.pt:85
 msgid "Direct link"
 msgstr "Link diretto"
 
-#: ../content/formtopdfadapter.py:56
+#: ../content/formtopdfadapter.py:57
 msgid "Download Timeout"
 msgstr ""
 
@@ -27,16 +27,16 @@ msgstr ""
 msgid "FormToPDFAdapter"
 msgstr ""
 
-#: ../content/formtopdfadapter.py:57
+#: ../content/formtopdfadapter.py:58
 msgid "How many seconds should pass before downloading the PDF?"
 msgstr ""
 "Quanti secondi devono passare prima che parta il download automatico del PDF?"
 
-#: ../content/formtopdfadapter.py:37
+#: ../content/formtopdfadapter.py:38
 msgid "PDF-Body Template"
 msgstr ""
 
-#: ../browser/redirect_view.pt:80
+#: ../browser/redirect_view.pt:82
 msgid "Problems with the download? Please use this link to download the file."
 msgstr "Problemi col download? Puoi usare questo link per scaricare il file."
 
@@ -44,7 +44,15 @@ msgstr "Problemi col download? Puoi usare questo link per scaricare il file."
 msgid "Something went wrong, please check your template!"
 msgstr "Qualcosa é andato storto, controlla il tuo template!"
 
-#: ../content/formtopdfadapter.py:40
+#: ../browser/redirect_view.pt:26
+msgid ""
+"The `pdf_redirect` view has been applied to this page. You see this because "
+"you have the permission to edit this content."
+msgstr ""
+"La vista `pdf_redirect` é stata applicata a questa pagina. Vedi questo "
+"messaggio perché hai i permessi per editare questo contenuto."
+
+#: ../content/formtopdfadapter.py:41
 msgid ""
 "This is a Zope Page Template used for rendering of the PDF for this form. "
 "You will find data from the form in the `options` var (es: options/comments)"
@@ -53,6 +61,6 @@ msgstr ""
 "questo form. Troverai i dati del form nella variabile `options` (es: options/"
 "comments)."
 
-#: ../browser/redirect_view.pt:76
+#: ../browser/redirect_view.pt:78
 msgid "Your download will start in ${timeout} seconds..."
 msgstr "Il download partirá in ${timeout} secondi..."
