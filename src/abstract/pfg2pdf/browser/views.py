@@ -13,7 +13,7 @@ from abstract.pfg2pdf import _
 
 class RedirectView(BrowserView):
 
-    refresh_timeout = 5
+    default_refresh_timeout = 5
     download_view = 'pdf_download'
 
     def can_edit(self):
@@ -29,12 +29,16 @@ class RedirectView(BrowserView):
             ])
         return url
 
+    @property
+    def refresh_timeout(self):
+        return self.request.get('download_timeout',
+                                self.default_refresh_timeout)
+
     def get_metatag_refresh(self):
-        refresh_timeout = self.request.get('download_timeout',
-                                           self.refresh_timeout)
+
         url = self.download_url()
         if url:
-            return "%s; url=%s" % (refresh_timeout,
+            return "%s; url=%s" % (self.refresh_timeout,
                                    url)
 
 
