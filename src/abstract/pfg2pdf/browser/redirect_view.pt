@@ -75,7 +75,8 @@
          tal:condition="download_url">
       <p class="starts-in" i18n:translate="">
         Your download will start in
-        <span i18n:name="timeout"
+        <span class="timeout"
+              i18n:name="timeout"
               tal:content="view/refresh_timeout">5</span> seconds...
       </p>
       <p class="problems">
