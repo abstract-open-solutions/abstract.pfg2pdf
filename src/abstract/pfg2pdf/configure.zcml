@@ -37,4 +37,16 @@
         handler=".subscribers.on_create_form_adapter"
         />
 
+    <subscriber
+        for=".interfaces.IFormToPDFAdapter
+             zope.lifecycleevent.interfaces.IObjectRemovedEvent"
+        handler=".subscribers.on_delete_form_adapter"
+        />
+
+    <subscriber
+        for="Products.PloneFormGen.interfaces.IPloneFormGenForm
+             zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+        handler=".subscribers.on_edit_form"
+        />
+
 </configure>
