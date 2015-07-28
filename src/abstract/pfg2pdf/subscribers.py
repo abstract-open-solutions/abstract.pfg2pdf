@@ -26,9 +26,15 @@ def unset_redirect_view(form):
     page = getattr(form, page_id, None)
     if page and page.getLayout() == 'pdf_redirect':
         # default view
-        # XXX: looks like in version 1.7.17 there's no template w/ this id :S
-        # page.setLayout('fg_thankspage_view_p3')
-        page.setLayout('base_view')
+        try:
+            page.fg_thankspage_view_p3
+            page.setLayout('fg_thankspage_view_p3')
+        except AttributeError:
+            # XXX: looks like in version 1.7.17
+            # there's no template w/ this id :S
+            # page.setLayout('fg_thankspage_view_p3')
+            # fallback to base view....
+            page.setLayout('base_view')
 
 
 def on_delete_form_adapter(context, event):
